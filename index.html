@@ -5,9 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><HTML/CSSの学習</title>
         <link rel="stylesheet" href="stylesheet.css">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#openbtn").on("click",function(){
+                    $("#nav").slideDown("fast");
+                    $("#closebtn").show();
+                    $("#openbtn").hide();
+                });
+                $("#closebtn").on("click",function(){
+                    $("#nav").slideUp("slow");
+                    $("#closebtn").hide();
+                    $("#openbtn").show();
+                });
+            });
+        </script>
     </head>
     <body>
+        <img id="openbtn" src="images/open.png">
+        <img id="closebtn" src="images/close.png">
+
         <div id="header">
             <h1><a href="index.html"><img id="corridor" src="images/corridor.jpg" alt="大学の廊下" /></a></h1>
         </div>
